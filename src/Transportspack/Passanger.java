@@ -1,4 +1,4 @@
-package Transport;
+package Transportspack;
 
 public class Passanger extends Transport {
 

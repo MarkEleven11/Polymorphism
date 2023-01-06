@@ -1,8 +1,5 @@
 package Drivers;
 
-import Drivers.Driver;
-import Transport.Bus;
-
 public class DriverD extends Driver{
 
     private String categoryD;

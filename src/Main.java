@@ -2,7 +2,7 @@ import Drivers.Driver;
 import Drivers.DriverB;
 import Drivers.DriverC;
 import Drivers.DriverD;
-import Transport.*;
+import Transportspack.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -60,9 +60,10 @@ public class Main {
         Driver<Bus> keanu = new Driver<>("Keanu Reeves", true,21, mercedes);
         Driver<Passanger> rayan = new Driver<>("Rayan Gosling", true, 15, bmw);
 
-        rayan.toRace();
-        keanu.toRace();
-        tom.toRace();
+        rayan.toRace(bmw);
+        keanu.toRace(mercedes);
+        tom.toRace(freighliner);
+        rayan.toRace(skoda);
 
 
 
