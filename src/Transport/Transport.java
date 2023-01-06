@@ -1,6 +1,8 @@
 package Transport;
 
-public class Transport {
+import Drivers.DriverB;
+
+public class Transport implements Competing {
 
     private String brand;
 
@@ -43,15 +45,39 @@ public class Transport {
     }
 
     public void movement() {
-        System.out.println("Вставить ключ");
-        System.out.println("Снять ручник");
-        System.out.println("Завести двигатель");
-        System.out.println("Начать движение");
+        System.out.println(getBrand() + " " + getModel() + " - вставить ключ, снять ручник, завести двигатель.");
     }
 
     public void stop() {
-        System.out.println("Остановить автомобиль");
-        System.out.println("Заглушить двигатель");
-        System.out.println("Поставить на ручник");
+        System.out.println(getBrand() + " " + getModel() + " - остановить автомобиль, заглушить двигатель, поставить на ручник.");
+    }
+
+    @Override
+    public int pitStop(int numberOfLap) {
+        if (numberOfLap <= 30 && numberOfLap % 10 != 0) {
+            System.out.println(getBrand() + " " + getModel() + " продолжает движение");
+        } else if (numberOfLap == 31) {
+            System.out.println(getBrand() + " " + getModel() + " финишировал");
+        } else if (numberOfLap > 31) {
+            System.out.println("Для " + getBrand() + " " + getModel() + " гонка давно закончилась.");
+        } else {
+            System.out.println(getBrand() + " " + getModel() + " выходит на питстоп");
+        }
+        return numberOfLap;
+    }
+
+    @Override
+    public double bestTime(double time) {
+        System.out.println(getBrand() + " " + getModel() + " - лучшее время " + time + " минут.");
+        return 0;
+    }
+
+    @Override
+    public int maxSpeed(int speed) {
+        System.out.println(getBrand() + " " + getModel() + " - максимальная скорость " + speed + " километров в час.");
+        return 0;
     }
 }
+
+
+
