@@ -56,7 +56,7 @@ public class Main {
         reeves.stop();
         System.out.println();
 
-        Driver<DriverC> tom = new Driver<>("Tom Hardy", true,18, freighliner);
+        Driver<> tom = new Driver<>("Tom Hardy", true,18, freighliner);
         Driver<Bus> keanu = new Driver<>("Keanu Reeves", true,21, mercedes);
         Driver<Passanger> rayan = new Driver<>("Rayan Gosling", true, 15, bmw);
 
