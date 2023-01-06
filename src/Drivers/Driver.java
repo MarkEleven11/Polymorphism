@@ -1,6 +1,6 @@
 package Drivers;
 
-import com.sun.jdi.connect.Transport;
+import Transport.Transport;
 
 public class Driver<T extends Transport> {
 
